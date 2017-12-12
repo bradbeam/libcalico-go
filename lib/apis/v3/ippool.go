@@ -45,6 +45,8 @@ type IPPoolSpec struct {
 	NATOutgoing bool `json:"natOutgoing,omitempty"`
 	// When disabled is true, Calico IPAM will not assign addresses from this pool.
 	Disabled bool `json:"disabled,omitempty"`
+	// When anycast is true, bird will not import routes from this pool.
+	Anycast bool `json:"anycast,omitempty"`
 }
 
 type IPIPMode string
